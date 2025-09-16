@@ -1,0 +1,11 @@
+Create a module with 3 inputs and 2 outputs that implements a finite state machine.
+The FSM toggles between 'open' and 'closed' states on each button press.
+The FSM outputs signals indicating the current state.
+
+module PBWC (
+  input Clock,
+  input Reset,
+  input Press,
+  output Open_CW,
+  output Close_CCW
+);
