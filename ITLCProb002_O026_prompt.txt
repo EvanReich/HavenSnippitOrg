@@ -1,0 +1,11 @@
+
+Create a Verilog module with three inputs: A, B, and C, and one output: F.
+The output F should be set to 1 when the input combination corresponds to binary values 000, 010, or 110.
+Use `if-else` statements to implement the combinational logic.
+
+module O026  (
+  input A,
+  input B,
+  input C,
+  output F
+);
