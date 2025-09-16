@@ -1,4 +1,4 @@
-module O026 (
+module IFELSE026 (
   output reg F,
   input wire A, B, C
 );
