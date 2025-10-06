@@ -1,0 +1,9 @@
+Create a Verilog module that implements a 4-to-2 priority encoder using logical operators.
+The module should have four inputs: ABCD (4-bit input bus) and two outputs: YZ (2-bit output bus).
+Use continuous assignment (assign) statements with logical OR operations to generate the outputs based on the input values.
+Each output bit of YZ should be determined directly from combinations of the input bits without using always blocks or conditional operators.
+
+module LOGENC (
+  input  [3:0] ABCD,
+  output [1:0] YZ
+);
