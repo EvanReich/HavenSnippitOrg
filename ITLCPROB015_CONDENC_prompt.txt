@@ -1,0 +1,9 @@
+Create a Verilog module that implements a 4-to-2 priority encoder using conditional operators.
+The module should have four inputs: ABCD (4-bit input bus) and two outputs: YZ (2-bit output bus).
+Implement the encoding logic using a single continuous assignment (assign) statement with nested conditional operators to select the output based on the input value.
+Include a default case that assigns unknown (X) values to YZ for any unspecified input combinations.
+
+module CONDENC (
+  input  [3:0] ABCD,
+  output [1:0] YZ
+);
