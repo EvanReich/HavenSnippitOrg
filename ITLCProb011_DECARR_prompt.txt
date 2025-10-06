@@ -1,0 +1,10 @@
+Create a Verilog module that implements a 3-to-8 line decoder using array inputs and outputs.
+The module should have a 3-bit input bus ABC and an 8-bit output bus F.
+Only one bit of the output F should be set to 1 for each unique input combination of ABC (one-hot output).
+Implement the decoder using a single continuous assignment (assign) statement with nested conditional (ternary) operators, rather than multiple assign lines.
+Include a final case that assigns unknown (X) values to F for any unspecified input combinations.
+
+module DECARR (
+  input  [2:0] ABC,
+  output [7:0] F
+);
