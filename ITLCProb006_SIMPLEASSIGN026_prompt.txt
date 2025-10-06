@@ -1,0 +1,10 @@
+The output F should be set to 1 when the input combination corresponds to binary values 000, 010, or 110.
+Implement the logic using a single continuous assignment statement (assign) that expresses the simplified Boolean equation F = !C AND (!A OR B)
+Do not use always blocks or intermediate wires.
+
+module SIMPLEASSIGN026 (
+  input A,
+  input B,
+  input C,
+  output F
+);
