@@ -1,0 +1,9 @@
+Create a Verilog module that drives a 7-segment display to represent binary input values 0–7, using array inputs and outputs.
+The module should have a 3-bit input bus ABC and a 7-bit output bus F, where each bit of F corresponds to a segment on the 7-segment display.
+Implement the segment logic using a single continuous assignment (assign) statement with nested conditional operators, so that the appropriate segments light up for each input value.
+Include a default case that assigns unknown (X) values for any unspecified input combinations
+
+module ARR7SEG (
+  input  [2:0] ABC,
+  output [6:0] F
+);
