@@ -1,0 +1,10 @@
+Create a Verilog module that implements a 4-to-1 multiplexer using logical operators.
+The module should have four data inputs: A, B, C, and D, a 2-bit select input Sel, and one output F.
+Use continuous assignment (assign) statements with AND, OR, and NOT operators to select the appropriate input based on the select lines.
+The output F should reflect the value of the selected input according to the binary value of Sel.
+
+module LOGMUX (
+  input  A, B, C, D,
+  input  [1:0] Sel,
+  output F
+);
