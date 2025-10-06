@@ -1,7 +1,7 @@
 Create a Verilog module that implements a 3-to-8 line decoder with one-hot outputs.
 The module should have three inputs: A, B, and C, and eight outputs: F0 through F7.
 Each output Fn should correspond to one of the eight possible binary combinations of the inputs, such that exactly one output is HIGH (1) for any given input combination.
-Implement the logic using continuous assignment (assign) statements and &/~ operations for each output condition.
+Implement the logic using 8 continuous assignment (assign) statements and &/~ operations for each output condition.
 
 module DEC3TO8 (
   input A,
