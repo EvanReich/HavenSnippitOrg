@@ -1,0 +1,11 @@
+Create a Verilog module that drives a 7-segment display to represent binary input values 0–7.
+The module should have three inputs: A, B, and C, representing a 3-bit binary number, and seven outputs: Fa through Fg, corresponding to the display segments a–g.
+Each output should be assigned a Boolean expression that turns on the appropriate segments for displaying the digits 0 through 7 on a common-cathode 7-segment display.
+Implement the logic using continuous assignment (assign) statements with standard logic operations (AND, OR, and NOT).
+
+module DEC7SEG (
+  input A,
+  input B,
+  input C,
+  output Fa, Fb, Fc, Fd, Fe, Ff, Fg
+);
