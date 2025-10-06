@@ -1,0 +1,11 @@
+Create a Verilog module with three inputs: A, B, and C, and one output: F.
+The output F should be set to 1 when the input combination corresponds to binary values 000, 010, or 110.
+Implement the logic using AND and OR gates, with inverted inputs defined using separate internal wires named An, Bn, and Cn.
+Name the intermediate AND gate outputs m0, m2, and m6, and combine them using an OR gate to produce the final output F.
+
+module ANDOR026 (
+  input A,
+  input B,
+  input C,
+  output F
+);
