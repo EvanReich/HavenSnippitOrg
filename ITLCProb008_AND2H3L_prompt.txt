@@ -1,0 +1,9 @@
+Create a Verilog module with two inputs: A and B, and one output: F.
+The output F should represent the logical AND of the two inputs.
+Include a propagation delay of 2 nanoseconds for low to high transitions and 3 nanoseconds in high to low transitions in the assign statement to simulate the time it takes for the output to respond to input changes.
+
+module AND2H3L (
+  input A,
+  input B,
+  output F
+);
