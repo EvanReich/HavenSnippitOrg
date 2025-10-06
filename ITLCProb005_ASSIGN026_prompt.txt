@@ -1,6 +1,7 @@
 Create a Verilog module with three inputs: A, B, and C, and one output: F.
 The output F should be set to 1 when the input combination corresponds to binary values 000, 010, or 110.
 Implement the combinational logic using a single continuous assignment statement (assign) with nested conditional (ternary) operators to determine the output value.
+Check each possible corresponding output individually, with no simplification.
 Avoid using always blocks or intermediate wires.
 
 module ASSIGN026 (
