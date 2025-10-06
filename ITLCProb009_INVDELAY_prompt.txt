@@ -1,0 +1,9 @@
+Create a Verilog module with one input: A, and one output: F.
+The output F should represent the logical inversion of input A (i.e., F = NOT A).
+Include a propagation delay of 3 nanoseconds in the assign statement to simulate gate delay.
+This delay causes the output to ignore small, brief pulses on the input signal that last less than 3 nanoseconds, effectively filtering out glitches.
+
+module INVDELAY (
+  input A,
+  output F
+);
