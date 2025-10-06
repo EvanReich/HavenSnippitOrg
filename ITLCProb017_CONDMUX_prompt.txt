@@ -1,0 +1,10 @@
+Create a Verilog module that implements a 4-to-1 multiplexer using conditional operators.
+The module should have four data inputs: A, B, C, and D, a 2-bit select input Sel, and one output F.
+Implement the multiplexing logic using a single continuous assignment (assign) statement with nested conditional operators to select the output based on the select lines.
+Include a default case that assigns unknown (X) to F for any unspecified input combinations.
+
+module CONDMUX (
+  input  A, B, C, D,
+  input  [1:0] Sel,
+  output F
+);
