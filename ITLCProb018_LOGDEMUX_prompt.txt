@@ -1,0 +1,10 @@
+Create a Verilog module that implements a 1-to-4 demultiplexer using logical operators.
+The module should have one data input A, a 2-bit select input Sel, and four outputs: W, X, Y, and Z.
+Use continuous assignment (assign) statements with AND and NOT operators to route the input signal A to exactly one of the outputs based on the binary value of Sel.
+Each output should be active (logic high) only when its corresponding select combination is chosen.
+
+module LOGDEMUX (
+  input  A,
+  input  [1:0] Sel,
+  output W, X, Y, Z
+);
