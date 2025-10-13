@@ -1,0 +1,6 @@
+Create a testbench module that generates a continuous clock signal as an output. 
+The clock CLK should start at 0 and toggle every 10 time units, giving a period of 20 time units.
+
+module CLOCKGEN (
+    output reg CLK
+);
