@@ -1,0 +1,6 @@
+Create a testbench module that generates a clock signal for a fixed number of transitions using a repeat loop. 
+The clock CLK should start at 0 and toggle every 10 time units for 10 transitions, producing 5 full clock periods.
+
+module REPEATCLOCK (
+    output reg CLK
+);
