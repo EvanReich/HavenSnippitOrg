@@ -1,0 +1,8 @@
+Create a circuit that uses non-blocking assignments to illustrate how multiple outputs can be updated simultaneously within an always block. 
+The output Y should represent the logical AND of inputs A and B, and the output Z should represent the logical OR of inputs B and C. 
+The always block should trigger whenever A, B, or C changes.
+
+module NONBLOCKANDOR (
+    output reg Y, Z,
+    input wire A, B, C
+);
