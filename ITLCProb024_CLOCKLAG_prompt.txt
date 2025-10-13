@@ -1,0 +1,9 @@
+Create a circuit that demonstrates non-blocking assignments to introduce a one-clock-cycle delay. 
+The input A is first assigned to an internal register B, and then B is assigned to the output F on the rising edge of the clock. 
+This ensures that F updates one cycle after A.
+
+module CLOCKLAG (
+    output reg F,
+    input wire A,
+    input wire Clock
+);
