@@ -1,0 +1,8 @@
+Model a simple 3-input AND gate using an always block. 
+Any transition on inputs A, B, or C should trigger the block and update the output F accordingly.
+
+module AND3_ALWAYS (
+    output reg F,
+    input wire A, B, C
+);
+
