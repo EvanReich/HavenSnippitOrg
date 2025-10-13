@@ -1,0 +1,8 @@
+Create a testbench module that generates a clock signal as long as an enable signal EN is high. 
+The clock CLK should start at 0 and toggle every 10 time units while EN == 1. 
+When EN becomes 0, the clock stops toggling and holds its last value.
+
+module ENCLOCK (
+    output reg CLK,
+    input wire EN
+);
