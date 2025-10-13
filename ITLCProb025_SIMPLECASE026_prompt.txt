@@ -1,0 +1,9 @@
+Create a combinational logic module using a case statement. 
+The module should have three inputs A, B, and C and one output F. 
+Set F to 1 when the input combination is 000, 010, or 111; otherwise, set F to 0.
+Use a single comma-delimited line for checking the given combinations, and a default line, for a total of two lines in the case.
+
+module SIMPLECASE026 (
+    output reg F,
+    input wire A, B, C
+);
