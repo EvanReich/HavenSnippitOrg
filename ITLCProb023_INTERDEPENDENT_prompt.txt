@@ -1,0 +1,9 @@
+Design a circuit that demonstrates interdependent blocking assignments within an always block.
+Use an internal register n1 to store the intermediate result of the XOR operation between inputs A and B.
+Then, compute the final output S as the XOR of n1 and input C.
+The always block should update whenever A, B, or C changes.
+
+module INTERDEPENDENT (
+    output reg S,
+    input wire A, B, C
+);
