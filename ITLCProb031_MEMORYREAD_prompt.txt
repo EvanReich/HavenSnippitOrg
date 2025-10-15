@@ -1,0 +1,11 @@
+Create a testbench module that reads binary data from a file into a predeclared storage array. 
+The module should have a predeclared input FILENAME specifying the file to read. 
+The module should have an output storage array memory[7:0] of 3-bit vectors. Use $readmemb to load the data from FILENAME into memory. 
+Include two separate initial blocks. The first block, named Read_Block, should read the file into memory. 
+The second block, named Print_Block, should print each element of memory to the simulation transcript. 
+Each printed line should follow the format: "reading memory (n-1th digit of 8-bit memory)"
+
+module MEMORYREAD (
+    input  [8*20:1] FILENAME,
+    output reg [2:0] memory [7:0]
+);
