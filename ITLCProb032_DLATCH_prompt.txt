@@ -1,0 +1,10 @@
+Create a Verilog module named DLATCH that models a level-sensitive D latch.
+The module should have inputs C (control signal) and D (data input), and outputs Q and Qn.
+When C is high (1), Q should take the value of D, and Qn should take the inverse of D.
+When C is low (0), the latch should hold its previous output values.
+Use nonblocking assignments for output updates within an always block sensitive to both C and D.
+
+module DLATCH (
+    output reg Q, Qn,
+    input wire C, D
+);
