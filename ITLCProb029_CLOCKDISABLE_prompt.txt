@@ -1,0 +1,7 @@
+Create a testbench module that generates a clock signal using a forever loop named "loop" that can be disabled based on an enable signal EN. 
+The clock CLK should start at 0 and toggle every 10 time units while EN = 1. When EN = 0, the loop is disabled and stops executing.
+
+module CLOCKDISABLE (
+    output reg CLK,
+    input wire EN
+);
