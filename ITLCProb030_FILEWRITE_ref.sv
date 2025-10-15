@@ -1,4 +1,4 @@
-module FILE_WRITE_INPUTS (
+module FILEWRITE (
     input integer A,
     input real B
 );
