@@ -1,0 +1,8 @@
+Create a testbench module that writes input values to a file, using $fopen, $fdisplay, and $fclose.
+The module should create a file called "Data_out.txt" open it to FILE_1, and write the values of inputs A (integer) and B (real) to it.
+The written format should be "A is (integer value)" and "B is (real value)"
+
+module FILEWRITE (
+    input integer A,
+    input real B
+);
