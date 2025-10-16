@@ -1,0 +1,10 @@
+Create a module named DFLIPFLOP that models an edge-triggered D flip-flop.
+The module should have inputs Clock and D, and outputs Q and Qn.
+The flip-flop should update its outputs on the positive edge of the clock signal.
+At each rising edge, Q should take the value of D, and Qn should take the inverse of D.
+Use nonblocking assignments inside the always @ (posedge Clock) block to ensure proper sequential behavior.
+
+module DFLIPFLOP ( 
+    output reg Q, Qn,
+    input wire Clock, D
+);
