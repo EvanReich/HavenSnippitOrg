@@ -1,0 +1,11 @@
+Create a Verilog module named DFFRESET that models a D flip-flop with an active-low asynchronous reset.
+The module should have inputs Clock, Reset, and D, and outputs Q and Qn.
+The flip-flop should update its outputs on the positive edge of Clock or the negative edge of Reset.
+When Reset is low (0), Q should be set to 0 and Qn should be set to 1.
+When Reset is high (1), on each rising edge of the clock, Q should take the value of D and Qn should take the inverse of D.
+Use nonblocking assignments to ensure proper sequential operation.
+
+module DFFRESET (
+    output reg Q, Qn,
+    input wire Clock, Reset, D
+);
