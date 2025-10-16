@@ -1,4 +1,4 @@
-module DFFRESET (
+module DFFPRESET (
     output reg Q, Qn,
     input wire Clock, Reset, Preset, D
 );
