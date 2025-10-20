@@ -1,0 +1,13 @@
+Create a synthesizable 8-bit register module named BASICREG.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), EN (input, active-high enable), Reg_In (input [7:0]), and Reg_Out (output reg [7:0]) representing the stored register value.
+The design shall include a single sequential block named REGISTER, sensitive to the positive edge of Clock and the negative edge of Reset.
+Inside REGISTER, when Reset is asserted low, Reg_Out shall be cleared to 8'h00 using a nonblocking assignment.
+When Reset is high and EN is asserted, Reg_Out shall be updated to the value of Reg_In.
+If EN is deasserted, Reg_Out shall hold its previous value.
+Use nonblocking assignments throughout and name the sequential block exactly REGISTER.
+
+module BASICREG (
+    output reg [7:0] Reg_Out,
+    input wire Clock, Reset, EN,
+    input wire [7:0] Reg_In
+);
