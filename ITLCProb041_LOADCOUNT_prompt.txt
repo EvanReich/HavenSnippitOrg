@@ -1,0 +1,13 @@
+Create a synthesizable 4-bit loadable counter module named LOADCOUNT.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), EN (input, active-high count enable), Load (input, active-high load control), CNT_in (input [3:0] load value), and CNT (output reg [3:0]) representing the counter output.
+The counter logic shall be implemented in a single sequential block named COUNTER, sensitive to the positive edge of Clock and the negative edge of Reset.
+Inside COUNTER, when Reset is asserted low, CNT shall be reset to 4'b0000 using a nonblocking assignment.
+When Reset is high and EN is asserted, if Load is also asserted, CNT shall load the value of CNT_in; otherwise, CNT shall increment by one.
+If EN is deasserted, CNT shall hold its current value.
+Use nonblocking assignments throughout and name the sequential block exactly COUNTER.
+
+module LOADCOUNT (
+    output reg [3:0] CNT,
+    input wire Clock, Reset, EN, Load,
+    input wire [3:0] CNT_in
+);
