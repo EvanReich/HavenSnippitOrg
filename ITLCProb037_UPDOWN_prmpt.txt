@@ -1,0 +1,37 @@
+Create a synthesizable up/down 2-bit counter module named UPDOWN that increments or decrements a 2-bit count based on the control input Up.
+When Up = 1, the counter shall increment its count on each rising clock edge.
+When Up = 0, the counter shall decrement its count on each rising clock edge.
+The module shall have the following ports and directions:
+Clock (input) — positive-edge-triggered clock signal.
+Reset (input, active low asynchronous reset).
+Up (input, direction control).
+CNT (output reg [1:0], current 2-bit count).
+The design shall be implemented as a finite state machine using explicit state encodings, named procedural blocks, and proper assignment styles.
+The state machine shall use a 2-bit reg for current_state and next_state.
+Declare four named state parameters with the following 2-bit encodings and exact parameter names:
+C0 = 2'b00;  
+C1 = 2'b01;  
+C2 = 2'b10;  
+C3 = 2'b11;
+The state memory shall be implemented in a named sequential block STATEMEMORY using a nonblocking assignment (<=).
+The STATEMEMORY block shall be sensitive to the positive edge of Clock and the negative edge of Reset, performing an asynchronous active-low reset to state C0.
+On the positive clock edge, current_state shall be updated to next_state using a nonblocking assignment.
+The next-state logic shall be implemented in a named combinational block NEXTSTATELOGIC.
+The NEXTSTATELOGIC block shall be sensitive to current_state and Up, and use a case statement on current_state with blocking (=) assignments to compute next_state.
+When Up = 1, the counter shall increment cyclically (C0→C1→C2→C3→C0).
+When Up = 0, the counter shall decrement cyclically (C0→C3→C2→C1→C0).
+The block shall include a default assignment to ensure next_state is defined in all cases.
+The output logic shall be implemented in a named combinational block OUTPUTLOGIC.
+The OUTPUTLOGIC block shall be sensitive to current_state and use a case statement with blocking assignments to compute CNT.
+The output mapping shall be:
+C0 → CNT = 2’b00
+C1 → CNT = 2’b01
+C2 → CNT = 2’b10
+C3 → CNT = 2’b11
+
+module UPDOWN (
+    output reg [1:0] CNT,
+    input wire Clock, Reset, Up
+);
+
+The block shall include a default assignment for CNT to prevent latch inference.
