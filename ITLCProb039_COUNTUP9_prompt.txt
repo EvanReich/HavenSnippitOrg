@@ -1,0 +1,12 @@
+Create a synthesizable 4-bit modulo-10 up-counter module named COUNTUP9 that counts from 0 to 9 and resets to 0 after reaching 10.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), and CNT (output reg [3:0]) representing the current count value.
+The counter behavior shall be implemented in a single sequential block named COUNTER, sensitive to the positive edge of Clock and the negative edge of Reset.
+Inside COUNTER, when Reset is asserted low, CNT shall be reset to 4'b0000 using a nonblocking assignment.
+When Reset is high and a positive clock edge occurs, the counter shall check if CNT == 10 (decimal).
+If true, CNT shall reset to 0 using a nonblocking assignment; otherwise, CNT shall increment by one.
+Use reg [3:0] CNT, nonblocking assignments throughout, and name the sequential block exactly COUNTER.
+
+module COUNTUP9 (
+    output reg [3:0] CNT,
+    input wire Clock, Reset
+);
