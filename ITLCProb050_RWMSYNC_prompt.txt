@@ -1,0 +1,13 @@
+Create a 4-word, 4-bit synchronous read/write memory module named RWMSYNC.
+The module shall have a 4-bit output data_out, a 2-bit input address, a 1-bit input WE (write enable), a 4-bit input data_in, and a clock input Clock.
+Declare a 4-word, 4-bit reg array RW[0:3].
+Implement an always block triggered on the positive edge of Clock.
+Within this block, if WE is high, the memory location RW[address] shall hold data_in. Otherwise, data_out shall hold the value stored in RW[address].
+
+module RWMSYNC (
+    output reg [3:0] data_out,
+    input wire [1:0] address,
+    input wire WE,
+    input wire [3:0] data_in,
+    input wire Clock
+);
