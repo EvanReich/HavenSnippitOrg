@@ -1,0 +1,20 @@
+Create a synthesizable serial-bit sequence detector module named SEQDAT that detects three consecutive logic-1 bits on the serial input Din and pulses the output ERR high when the third consecutive 1 is observed.
+The design must be fully specified with explicit state encodings, named procedural blocks, sensitivity lists, and assignment styles.
+The module shall be named SEQDAT, and have the following ports and directions: Clock (input), Reset (input, active-low asynchronous reset), Din (input, serial data), and ERR (output reg, active-high detection pulse).
+The state machine shall use a 3-bit reg for current_state and next_state. 
+Declare five state parameters with the exact names and encodings: Start = 3'b000; D0_is_1 = 3'b001; D1_is_1 = 3'b010; D0_not_1 = 3'b011; D1_not_1 = 3'b100;. 
+Implement state memory in a sequential block named STATEMEMORY using nonblocking assignments.
+STATEMEMORY shall be sensitive to posedge Clock or negedge Reset and shall asynchronously force current_state to Start when Reset is low; on each rising clock edge with Reset high, current_state shall be updated to next_state using <=.
+Implement next-state logic in a combinational block named NEXTSTATELOGIC.
+NEXTSTATELOGIC shall be sensitive to current_state and Din, use a case statement on current_state, and compute next_state with blocking assignments (=).
+Specify transitions so that seeing a 1 advances along the D0_is_1 → D1_is_1 path (and a third 1 results in the detection), and seeing a 0 moves the machine to the appropriate “not_1” states and then back to Start as defined by the encodings; ensure next_state is assigned in every case arm and in default.
+Implement output logic in a combinational block named OUTPUTLOGIC.
+OUTPUTLOGIC shall be sensitive to current_state and Din, use a case statement on current_state, and compute ERR with blocking assignments (=).
+The output behavior shall be exactly: when current_state == D1_is_1 and Din == 1'b1 then ERR = 1'b1; otherwise ERR = 1'b0.
+Ensure ERR is assigned in every case arm and in default so no latches are inferred.
+Use these coding conventions exactly: reg [2:0] current_state, next_state; use parameter for the state encodings with the exact names above; use always @ (posedge Clock or negedge Reset) for STATEMEMORY and nonblocking (<=) for current_state updates; use always @ (current_state or Din) for NEXTSTATELOGIC and OUTPUTLOGIC and use blocking (=) assignments inside those blocks; name the blocks STATEMEMORY, NEXTSTATELOGIC, and OUTPUTLOGIC exactly.
+
+module SEQDAT (
+    output reg ERR,
+    input wire Clock, Reset, Din
+);
