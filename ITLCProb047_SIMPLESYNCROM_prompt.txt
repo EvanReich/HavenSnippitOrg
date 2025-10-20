@@ -1,0 +1,10 @@
+Create a 4-word, 4-bit synchronous read-only memory module named SIMPLESYNCROM.
+The module shall have a 4-bit output data_out, a 2-bit input address, and a clock input Clock. 
+mplement an always block triggered on the positive edge of Clock that uses a case statement on address to assign data_out with blocking assignments.
+The assignments shall be: address 0 holds 4'b1110, address 1 holds 4'b0010, address 2 holds 4'b1111, address 3 holds 4'b1010, and the default case holds 4'bXXXX.
+
+module SIMPLESYNCROM (
+    output reg [3:0] data_out,
+    input wire [1:0] address,
+    input wire Clock
+);
