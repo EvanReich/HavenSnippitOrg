@@ -1,0 +1,12 @@
+Create a synthesizable 4-bit enabled up-counter module named ENCOUNT4.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), EN (input, active-high count enable), and CNT (output reg [3:0]) representing the counter value.
+The counter logic shall be implemented in a single sequential block named COUNTER, sensitive to the positive edge of Clock and the negative edge of Reset.
+Inside COUNTER, when Reset is asserted low, CNT shall be reset to 4'b0000 using a nonblocking assignment.
+When Reset is high and EN is asserted (EN == 1), CNT shall increment by one using a nonblocking assignment.
+If EN is deasserted, CNT shall hold its current value.
+Use nonblocking assignments throughout and name the sequential block exactly COUNTER.
+
+module ENCOUNT4 (
+    output reg [3:0] CNT,
+    input wire Clock, Reset, EN
+);
