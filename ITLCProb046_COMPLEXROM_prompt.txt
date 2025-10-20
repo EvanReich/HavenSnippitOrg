@@ -1,0 +1,9 @@
+Create a 4-word, 4-bit read-only memory module named COMPLEXROM using an internal array.
+The module shall have a 4-bit output data_out and a 2-bit input address.
+Declare a 4x4-bit internal reg array named ROM[0:3] and initialize it in an initial block with the following values: ROM[0] = 4'b1110, ROM[1] = 4'b0010, ROM[2] = 4'b1111, ROM[3] = 4'b0100.
+Implement a combinational always block sensitive to address that assigns data_out from ROM[address] using a blocking assignment.
+
+module COMPLEXROM (
+    output reg [3:0] data_out,
+    input wire [1:0] address
+);
