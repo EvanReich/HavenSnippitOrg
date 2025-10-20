@@ -1,0 +1,12 @@
+Create a synthesizable 4-bit up-counter module named COUNTUP4 that increments its count value on each rising edge of the clock and includes an active-low asynchronous reset that clears the count to zero.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), and CNT (output reg [3:0]) representing the current count.
+The design shall use a single named sequential block called COUNTER, sensitive to the positive edge of Clock and the negative edge of Reset.
+Within COUNTER, when Reset is asserted low, CNT shall be cleared to 4'b0000 using a nonblocking assignment
+When Reset is high and a positive clock edge occurs, CNT shall increment by one (CNT <= CNT + 1) using a nonblocking assignment.
+The counter shall naturally wrap from 4'b1111 to 4'b0000 upon overflow.
+Use reg [3:0] CNT, and name the sequential block exactly COUNTER.
+
+module COUNTUP4 (
+    output reg [3:0] CNT,
+    input wire Clock, Reset
+);
