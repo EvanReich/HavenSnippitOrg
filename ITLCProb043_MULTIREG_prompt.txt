@@ -1,0 +1,14 @@
+Create a synthesizable 3-register module named MULTIREG with 8-bit outputs A, B, and C.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), Data_Bus (input [7:0]), and individual enable signals A_EN, B_EN, C_EN (inputs, active-high) for each register.
+Each register shall be implemented in its own sequential block: A_REG, B_REG, and C_REG, sensitive to the positive edge of Clock and the negative edge of Reset.
+Within each block, when Reset is asserted low, the corresponding register shall be cleared to 8'h00 using a nonblocking assignment
+When Reset is high and the corresponding enable signal is asserted, the register shall load the value from Data_Bus.
+Otherwise, it shall hold its current value.
+Use nonblocking assignments throughout and name the sequential blocks exactly A_REG, B_REG, and C_REG.
+
+module MULTIREG (
+    output reg [7:0] A, B, C,
+    input wire Clock, Reset,
+    input wire [7:0] Data_Bus,
+    input wire A_EN, B_EN, C_EN
+);
