@@ -1,0 +1,10 @@
+Create a combinational 4-word, 4-bit read-only memory module named SIMPLEROM with outputs data_out (4 bits) and input address (2 bits).
+Implement a single combinational block sensitive to address that uses a case statement to assign data_out based on the value of input address.
+The mapping shall be: address 0 holds 4'b1110, address 1 holds 4'b0010, address 2 holds 4'b1111, address 3 holds 4'b0100.
+Use a default case to assign 4'bXXXX for any unspecified address values.
+Assignments within the case statement shall use blocking assignment (=).
+
+module SIMPLEROM (
+    output reg [3:0] data_out,
+    input wire [1:0] address
+);
