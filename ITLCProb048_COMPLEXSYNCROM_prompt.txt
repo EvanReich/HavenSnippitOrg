@@ -1,0 +1,10 @@
+Create a 4-word, 4-bit synchronous read-only memory module named COMPLEXSYNCROM.
+The module shall have a 4-bit output data_out, a 2-bit input address, and a clock input Clock.
+Declare a 4-word, 4-bit reg array ROM[0:3] and initialize it in an initial block with the following values: ROM[0] holds 4'b1110, ROM[1] holds 4'b0010, ROM[2] holds 4'b1111, and ROM[3] holds 4'b0100.
+Implement an always block triggered on the positive edge of Clock that assigns data_out to hold the value stored in ROM[address].
+
+module COMPLEXSYNCROM (
+    output reg [3:0] data_out,
+    input wire [1:0] address,
+    input wire Clock
+);
