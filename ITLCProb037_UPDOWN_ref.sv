@@ -27,7 +27,7 @@ begin: NEXT_STATE_LOGIC
         default : next_state = C0;
     endcase
 end
-// Output logic
+
 always @ (current_state)
 begin: OUTPUT_LOGIC
     case (current_state)
