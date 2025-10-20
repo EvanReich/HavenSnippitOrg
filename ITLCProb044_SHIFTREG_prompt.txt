@@ -1,0 +1,12 @@
+Create a synthesizable 4-stage 8-bit shift register module named SHIFTREG with outputs Dout0, Dout1, Dout2, and Dout3.
+The module shall have the following ports: Clock (input), Reset (input, active-low asynchronous reset), and Din (input [7:0]).
+Implement a single sequential block named SHIFT_REGISTER, sensitive to the positive edge of Clock and the negative edge of Reset.
+When Reset is asserted low, all outputs Dout0 through Dout3 shall be cleared to 8'h00 using nonblocking assignments.
+On the positive edge of Clock (with Reset high), update the registers to shift data serially: Dout0 loads Din, Dout1 loads the previous value of Dout0, Dout2 loads the previous value of Dout1, and Dout3 loads the previous value of Dout2
+Use nonblocking assignments throughout to preserve correct timing and ensure sequential behavior
+
+module SHIFTREG (
+    output reg [7:0] Dout0, Dout1, Dout2, Dout3,
+    input wire Clock, Reset,
+    input wire [7:0] Din
+);
